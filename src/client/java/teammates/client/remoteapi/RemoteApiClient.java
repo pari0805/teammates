@@ -48,7 +48,8 @@ public abstract class RemoteApiClient {
 
         OfyHelper.registerEntityClasses();
         Closeable objectifySession = ObjectifyService.begin();
-
+//FIXME: Use the exceptions handler for exceptions occured, try and catch block needed
+//        TODO: remove the finally block and use try and catch block
         try {
             doOperation();
         } finally {
