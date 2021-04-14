@@ -153,6 +153,7 @@ public class FileStore {
         cipher.init(Cipher.DECRYPT_MODE, sks);
 
         try (InputStream is = Files.newInputStream(Paths.get(fileName))) {
+
             CipherInputStream in = new CipherInputStream(is, cipher);
             JsonReader reader = new JsonReader(new InputStreamReader(in));
             T result = parser.apply(reader);

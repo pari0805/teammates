@@ -1817,6 +1817,7 @@ public  final class RequestLog extends
       return memoizedHashCode;
     }
     int hash = 41;
+
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + APP_ID_FIELD_NUMBER;
     hash = (53 * hash) + getAppId().hashCode();

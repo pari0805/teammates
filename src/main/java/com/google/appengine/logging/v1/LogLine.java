@@ -898,6 +898,7 @@ public  final class LogLine extends
     public Builder setLogMessageBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) {
+
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
