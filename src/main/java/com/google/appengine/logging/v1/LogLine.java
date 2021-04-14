@@ -324,22 +324,21 @@ public  final class LogLine extends
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
     }
-//    Fixme: Remove useless paranthesis
     int hash = 41;
-    hash = (19 * hash) + getDescriptor().hashCode();
+    hash = 19 * hash + getDescriptor().hashCode();
     if (hasTime()) {
-      hash = (37 * hash) + TIME_FIELD_NUMBER;
-      hash = (53 * hash) + getTime().hashCode();
+      hash = 37 * hash + TIME_FIELD_NUMBER;
+      hash = 53 * hash + getTime().hashCode();
     }
-    hash = (37 * hash) + SEVERITY_FIELD_NUMBER;
-    hash = (53 * hash) + severity_;
-    hash = (37 * hash) + LOG_MESSAGE_FIELD_NUMBER;
-    hash = (53 * hash) + getLogMessage().hashCode();
+    hash = 37 * hash + SEVERITY_FIELD_NUMBER;
+    hash = 53 * hash + severity_;
+    hash = 37 * hash + LOG_MESSAGE_FIELD_NUMBER;
+    hash = 53 * hash + getLogMessage().hashCode();
     if (hasSourceLocation()) {
-      hash = (37 * hash) + SOURCE_LOCATION_FIELD_NUMBER;
-      hash = (53 * hash) + getSourceLocation().hashCode();
+      hash = 37 * hash + SOURCE_LOCATION_FIELD_NUMBER;
+      hash = 53 * hash + getSourceLocation().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = 29 * hash + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
   }
