@@ -153,7 +153,7 @@ public class FileStore {
         cipher.init(Cipher.DECRYPT_MODE, sks);
 
         try (InputStream is = Files.newInputStream(Paths.get(fileName))) {
-
+//Fixme: Argument value needs to be adjusted because it is too short
             CipherInputStream in = new CipherInputStream(is, cipher);
             JsonReader reader = new JsonReader(new InputStreamReader(in));
             T result = parser.apply(reader);
