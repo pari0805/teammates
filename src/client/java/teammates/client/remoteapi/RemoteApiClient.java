@@ -37,6 +37,7 @@ public abstract class RemoteApiClient {
             // Dev Server doesn't require credential.
             options.useDevelopmentServerCredential();
         } else {
+//            FIXME: too many comment lines
             // Your Google Cloud SDK needs to be authenticated for Application Default Credentials
             // in order to run any script in production server.
             // Refer to https://developers.google.com/identity/protocols/application-default-credentials.
