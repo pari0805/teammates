@@ -367,6 +367,7 @@ public  final class SourceReference extends
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
+//        TODO: add logger call
       }
     }
     public Builder clear() {
