@@ -56,7 +56,7 @@ public  final class RequestLog extends
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
   }
-//  fixme:reduce cyclomatic complexity
+
   private RequestLog(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -78,28 +78,10 @@ public  final class RequestLog extends
             }
             break;
           }
-          case 10: {
+          case 10, 18, 26,34: {
             java.lang.String s = input.readStringRequireUtf8();
 
             appId_ = s;
-            break;
-          }
-          case 18: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            versionId_ = s;
-            break;
-          }
-          case 26: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            requestId_ = s;
-            break;
-          }
-          case 34: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            ip_ = s;
             break;
           }
           case 50: {
@@ -146,24 +128,13 @@ public  final class RequestLog extends
             megaCycles_ = input.readInt64();
             break;
           }
-          case 82: {
+          case 82,90,98: {
             java.lang.String s = input.readStringRequireUtf8();
 
             method_ = s;
             break;
           }
-          case 90: {
-            java.lang.String s = input.readStringRequireUtf8();
 
-            resource_ = s;
-            break;
-          }
-          case 98: {
-            java.lang.String s = input.readStringRequireUtf8();
-
-            httpVersion_ = s;
-            break;
-          }
           case 104: {
 
             status_ = input.readInt32();
