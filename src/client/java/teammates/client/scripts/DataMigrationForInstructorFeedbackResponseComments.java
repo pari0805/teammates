@@ -16,7 +16,9 @@ import teammates.storage.entity.FeedbackResponseComment;
 
 public class DataMigrationForInstructorFeedbackResponseComments extends
         DataMigrationEntitiesBaseScript<FeedbackResponseComment> {
-    //Todo: Atleast one constructor should be present. Create a constructor for the class.
+    DataMigrationForInstructorFeedbackResponseComments(){
+
+    }
     public static void main(String[] args) throws IOException {
         new DataMigrationForInstructorFeedbackResponseComments().doOperationRemotely();
     }

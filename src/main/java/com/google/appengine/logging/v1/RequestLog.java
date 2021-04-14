@@ -329,7 +329,7 @@ public  final class RequestLog extends
         .ensureFieldAccessorsInitialized(
             com.google.appengine.logging.v1.RequestLog.class, com.google.appengine.logging.v1.RequestLog.Builder.class);
   }
-  
+
 //  private int bitField0_;
   public static final int APP_ID_FIELD_NUMBER = 1;
   private volatile java.lang.Object appId_;
