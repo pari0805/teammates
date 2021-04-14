@@ -49,13 +49,19 @@ public abstract class RemoteApiClient {
 
         OfyHelper.registerEntityClasses();
         Closeable objectifySession = ObjectifyService.begin();
-//FIXME: Use the exceptions handler for exceptions occured, try and catch block needed
-//        TODO: remove the finally block and use try and catch block
+
+
         try {
             doOperation();
+        } catch(Exception e){
+            e.printStackTrace();
         } finally {
+            try{
             objectifySession.close();
             installer.uninstall();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
 
         System.out.println("--- Remote operation completed ---");
