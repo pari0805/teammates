@@ -324,6 +324,7 @@ public  final class LogLine extends
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
     }
+//    
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
     if (hasTime()) {
