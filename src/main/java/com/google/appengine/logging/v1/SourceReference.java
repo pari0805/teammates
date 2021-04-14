@@ -3,6 +3,9 @@
 
 package com.google.appengine.logging.v1;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * <pre>
  * A reference to a particular snapshot of the source tree used to build and
@@ -367,7 +370,9 @@ public  final class SourceReference extends
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
-//        TODO: add logger call
+        Logger logger = Logger.getLogger(SourceReference.class.getName());
+        logger.log(Level.INFO, "This is message for com.google.protobuf.GeneratedMessageV3\n" +
+                "              .alwaysUseFieldBuilders being used");
       }
     }
     public Builder clear() {
