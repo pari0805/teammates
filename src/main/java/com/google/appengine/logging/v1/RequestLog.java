@@ -56,6 +56,7 @@ public  final class RequestLog extends
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
   }
+//  fixme:reduce cyclomatic complexity
   private RequestLog(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
