@@ -31,8 +31,6 @@ public abstract class RemoteApiClient {
         String appUrl = ClientProperties.TARGET_URL.replaceAll("^https?://", "");
         String appDomain = appUrl.split(":")[0];
         int appPort = appUrl.contains(":") ? Integer.parseInt(appUrl.split(":")[1]) : 443;
-//TODO: Instead a logger call maybe used as Standard input and output print are used basically for debugging, remove system.out.println statements and replace with logger calls
-
 
         Logger logger = Logger.getLogger(RemoteApiClient.class.getName());
         logger.log(Level.INFO, "--- Starting remote operation ---");

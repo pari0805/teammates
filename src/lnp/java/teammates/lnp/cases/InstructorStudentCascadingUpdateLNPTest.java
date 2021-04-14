@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
 
 import org.apache.jmeter.protocol.http.control.HeaderManager;
 import org.apache.jorphan.collections.HashTree;
@@ -17,6 +18,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import teammates.client.remoteapi.RemoteApiClient;
 import teammates.common.datatransfer.DataBundle;
 import teammates.common.datatransfer.InstructorPrivileges;
 import teammates.common.datatransfer.attributes.AccountAttributes;
@@ -30,6 +32,7 @@ import teammates.common.exception.HttpRequestFailedException;
 import teammates.common.exception.TeammatesException;
 import teammates.common.util.Const;
 import teammates.common.util.JsonUtils;
+import teammates.common.util.Logger;
 import teammates.lnp.util.JMeterElements;
 import teammates.lnp.util.LNPSpecification;
 import teammates.lnp.util.LNPTestData;
@@ -299,8 +302,8 @@ public class InstructorStudentCascadingUpdateLNPTest extends BaseLNPTestCase {
             try {
                 createCsvConfigDataFile();
             } catch (IOException e) {
-//                FIXME: Use logger call instead and avoid print stack trace
-                e.printStackTrace();
+                Logger logger = Logger.getLogger( InstructorStudentCascadingUpdateLNPTest.class.getName());
+                logger.log(Level.WARNING, "Exception Occurred");
                 break;
             }
             threadGroup.add(JMeterElements.csvDataSet(getPathToTestDataFile(getCsvConfigPath())));
