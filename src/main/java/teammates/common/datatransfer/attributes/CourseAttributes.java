@@ -19,7 +19,7 @@ import teammates.storage.entity.Course;
  */
 public class CourseAttributes extends EntityAttributes<Course> implements Comparable<CourseAttributes> {
 
-    private static final Logger log = Logger.getLogger();
+    private static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
 
     public Instant createdAt;
     public Instant deletedAt;

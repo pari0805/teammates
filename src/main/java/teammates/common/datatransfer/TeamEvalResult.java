@@ -19,7 +19,7 @@ public class TeamEvalResult {
     public static final int NSU = Const.POINTS_NOT_SURE;
     /** did Not SuBmit. */
     public static final int NSB = Const.POINTS_NOT_SUBMITTED;
-    private static final Logger log = Logger.getLogger();
+    private static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
 
     /** submission values originally from students of the team. */
     public int[][] claimed;

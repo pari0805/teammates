@@ -37,7 +37,7 @@ import teammates.storage.search.StudentSearchQuery;
  */
 public class StudentsDb extends EntitiesDb<CourseStudent, StudentAttributes> {
 
-    private static final Logger log = Logger.getLogger();
+    private static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
 
     private static final int MAX_KEY_REGENERATION_TRIES = 5;
 

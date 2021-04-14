@@ -34,7 +34,7 @@ public final class SearchManager {
             "Failed to put document(s) %s into search index %s due to non-transient backend issue: ";
     private static final String ERROR_MAXIMUM_RETRIES_EXCEEDED =
             "Failed to put document(s) %s into search index %s after maximum retries: %s: ";
-    private static final Logger log = Logger.getLogger();
+    private static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
     private static final ThreadLocal<Map<String, Index>> PER_THREAD_INDICES_TABLE = new ThreadLocal<>();
 
     private static final RetryManager RM = new RetryManager(8);

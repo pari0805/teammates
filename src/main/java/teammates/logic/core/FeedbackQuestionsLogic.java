@@ -38,7 +38,7 @@ public final class FeedbackQuestionsLogic {
 
     static final String USER_NAME_FOR_SELF = "Myself";
 
-    private static final Logger log = Logger.getLogger();
+    private static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
 
     private static FeedbackQuestionsLogic instance = new FeedbackQuestionsLogic();
 

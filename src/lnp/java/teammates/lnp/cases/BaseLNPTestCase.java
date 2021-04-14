@@ -30,6 +30,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.stream.JsonReader;
 
+import teammates.client.remoteapi.RemoteApiClient;
 import teammates.common.datatransfer.DataBundle;
 import teammates.common.exception.HttpRequestFailedException;
 import teammates.common.exception.TeammatesException;
@@ -52,7 +53,7 @@ public abstract class BaseLNPTestCase extends BaseTestCase {
     protected static final String POST = HttpPost.METHOD_NAME;
     protected static final String PUT = HttpPut.METHOD_NAME;
     protected static final String DELETE = HttpDelete.METHOD_NAME;
-    protected static final Logger log = Logger.getLogger();
+    protected static final Logger log = Logger.getLogger(RemoteApiClient.class.getName());
 
     private static final BackDoor BACKDOOR = BackDoor.getInstance();
 

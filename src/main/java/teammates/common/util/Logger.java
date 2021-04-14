@@ -1,5 +1,7 @@
 package teammates.common.util;
 
+import java.util.logging.Level;
+
 /**
  * Allows any component of the application to log messages at appropriate levels.
  */
@@ -12,7 +14,7 @@ public final class Logger {
         this.log = java.util.logging.Logger.getLogger(logRequester.getClassName());
     }
 
-    public static Logger getLogger() {
+    public static Logger getLogger(String name) {
         return new Logger();
     }
 
@@ -52,4 +54,6 @@ public final class Logger {
         log.severe(msg);
     }
 
+    public void log(Level info, String s) {
+    }
 }

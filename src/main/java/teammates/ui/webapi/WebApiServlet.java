@@ -30,7 +30,7 @@ import teammates.common.util.TimeHelper;
 @MultipartConfig
 public class WebApiServlet extends HttpServlet {
 
-    private static final Logger log = Logger.getLogger();
+    private static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
 
     @Override
     public void init() {

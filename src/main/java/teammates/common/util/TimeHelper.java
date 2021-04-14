@@ -19,7 +19,7 @@ import teammates.common.exception.TeammatesException;
  */
 public final class TimeHelper {
 
-    private static final Logger log = Logger.getLogger();
+    private static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
 
     private TimeHelper() {
         // utility class

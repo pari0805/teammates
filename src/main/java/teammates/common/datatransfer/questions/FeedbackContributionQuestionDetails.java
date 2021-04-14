@@ -39,7 +39,7 @@ public class FeedbackContributionQuestionDetails extends FeedbackQuestionDetails
     private static final int SUMMARY_INDEX_CLAIMED = 0;
     private static final int SUMMARY_INDEX_PERCEIVED = 1;
 
-    private static final Logger log = Logger.getLogger();
+    private static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
 
     private boolean isNotSureAllowed;
 

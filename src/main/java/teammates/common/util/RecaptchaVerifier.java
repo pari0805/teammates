@@ -20,7 +20,7 @@ public class RecaptchaVerifier {
     /** The Google reCAPTCHA API URL to verify the response token. */
     private static final String VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify";
 
-    private static final Logger log = Logger.getLogger();
+    private static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
 
     private final String secretKey;
 

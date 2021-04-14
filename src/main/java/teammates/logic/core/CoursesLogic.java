@@ -30,7 +30,7 @@ import teammates.storage.api.CoursesDb;
  */
 public final class CoursesLogic {
 
-    private static final Logger log = Logger.getLogger();
+    private static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
 
     private static CoursesLogic instance = new CoursesLogic();
 

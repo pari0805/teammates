@@ -24,7 +24,7 @@ import teammates.storage.api.InstructorsDb;
  */
 public final class InstructorsLogic {
 
-    private static final Logger log = Logger.getLogger();
+    private static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
 
     private static InstructorsLogic instance = new InstructorsLogic();
 

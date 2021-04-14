@@ -13,7 +13,7 @@ import teammates.common.util.Logger;
  */
 class FeedbackSessionPublishedEmailWorkerAction extends AdminOnlyAction {
 
-    private static final Logger log = Logger.getLogger();
+    private static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
 
     @Override
     JsonResult execute() {

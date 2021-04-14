@@ -1,6 +1,7 @@
 package teammates.client.remoteapi;
 
 import java.io.IOException;
+import java.util.logging.Level;
 
 import com.google.appengine.tools.remoteapi.RemoteApiInstaller;
 import com.google.appengine.tools.remoteapi.RemoteApiOptions;
@@ -9,6 +10,7 @@ import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.Closeable;
 
 import teammates.client.util.ClientProperties;
+import teammates.common.util.Logger;
 import teammates.storage.api.OfyHelper;
 
 /**
@@ -24,12 +26,17 @@ public abstract class RemoteApiClient {
 
     protected void doOperationRemotely() throws IOException {
 
+
+
         String appUrl = ClientProperties.TARGET_URL.replaceAll("^https?://", "");
         String appDomain = appUrl.split(":")[0];
         int appPort = appUrl.contains(":") ? Integer.parseInt(appUrl.split(":")[1]) : 443;
 //TODO: Instead a logger call maybe used as Standard input and output print are used basically for debugging, remove system.out.println statements and replace with logger calls
-        System.out.println("--- Starting remote operation ---");
-        System.out.println("Going to connect to:" + appDomain + ":" + appPort);
+
+
+        Logger logger = Logger.getLogger(RemoteApiClient.class.getName());
+        logger.log(Level.INFO, "--- Starting remote operation ---");
+        logger.log(Level.INFO,"Going to connect to:" + appDomain + ":" + appPort);
 
         RemoteApiOptions options = new RemoteApiOptions().server(appDomain, appPort);
 

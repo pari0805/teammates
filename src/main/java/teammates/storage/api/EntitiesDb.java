@@ -51,7 +51,7 @@ abstract class EntitiesDb<E extends BaseEntity, A extends EntityAttributes<E>> {
     static final String OPTIMIZED_SAVING_POLICY_APPLIED =
             "Saving request is not issued because entity %s does not change by the update (%s)";
 
-    static final Logger log = Logger.getLogger();
+    static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
 
     /**
      * Creates the entity in the Datastore.

@@ -7,7 +7,7 @@ import teammates.ui.request.ErrorReportRequest;
  * Actions: sends an error report to the system admin.
  */
 class SendErrorReportAction extends Action {
-    private static final Logger log = Logger.getLogger();
+    private static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
 
     @Override
     AuthType getMinAuthLevel() {

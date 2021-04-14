@@ -32,7 +32,7 @@ import teammates.common.util.Url;
  */
 public class OriginCheckFilter implements Filter {
 
-    private static final Logger log = Logger.getLogger();
+    private static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
 
     private static final String ALLOWED_HTTP_METHODS = String.join(", ", Arrays.asList(
             HttpGet.METHOD_NAME,

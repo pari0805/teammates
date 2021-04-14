@@ -53,7 +53,7 @@ public class EmailGenerator {
     private static final String HTML_NO_ACTION_REQUIRED =
             "<p>No action is required if you have already submitted.</p>" + System.lineSeparator();
 
-    private static final Logger log = Logger.getLogger();
+    private static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
     private static final CoursesLogic coursesLogic = CoursesLogic.inst();
     private static final FeedbackSessionsLogic fsLogic = FeedbackSessionsLogic.inst();
     private static final InstructorsLogic instructorsLogic = InstructorsLogic.inst();

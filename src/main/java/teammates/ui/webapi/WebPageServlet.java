@@ -19,7 +19,7 @@ import teammates.common.util.Logger;
 @SuppressWarnings("serial")
 public class WebPageServlet extends HttpServlet {
 
-    private static final Logger log = Logger.getLogger();
+    private static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
 
     private static final String CSP_POLICY = String.join("; ", Arrays.asList(
             "default-src 'none'",

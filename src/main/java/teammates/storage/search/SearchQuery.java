@@ -18,7 +18,7 @@ public abstract class SearchQuery {
     static final String AND = " AND ";
     static final String OR = " OR ";
 
-    private static final Logger log = Logger.getLogger();
+    private static final Logger log = Logger.getLogger(teammates.client.remoteapi.RemoteApiClient.class.getName());
 
     QueryOptions options;
 
