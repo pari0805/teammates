@@ -299,7 +299,7 @@ public class InstructorStudentCascadingUpdateLNPTest extends BaseLNPTestCase {
             try {
                 createCsvConfigDataFile();
             } catch (IOException e) {
-
+//                FIXME: Use logger call instead and avoid print stack trace
                 e.printStackTrace();
                 break;
             }
