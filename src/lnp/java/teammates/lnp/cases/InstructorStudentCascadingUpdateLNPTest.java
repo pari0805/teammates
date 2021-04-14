@@ -304,6 +304,7 @@ public class InstructorStudentCascadingUpdateLNPTest extends BaseLNPTestCase {
             } catch (IOException e) {
                 Logger logger = Logger.getLogger( InstructorStudentCascadingUpdateLNPTest.class.getName());
                 logger.log(Level.WARNING, "Exception Occurred");
+                
                 break;
             }
             threadGroup.add(JMeterElements.csvDataSet(getPathToTestDataFile(getCsvConfigPath())));
